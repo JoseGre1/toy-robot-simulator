@@ -1,0 +1,92 @@
+AllCops:
+  TargetRubyVersion: "2.3.3"
+
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*
+    - vendor/**/*
+    - bin/**/*
+
+Style/CollectionMethods:
+  Enabled: true
+  PreferredMethods:
+    find: detect
+    inject: reduce
+    collect: map
+    find_all: select
+
+Metrics/BlockLength:
+  Enabled: false
+  CountComments: true
+  Max: 25
+  ExcludedMethods: []
+  Exclude:
+    - "spec/**/*"
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 9
+
+Style/StringLiterals:
+  Description: "Checks if using double quotes."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#consistent-string-literals"
+  EnforcedStyle: double_quotes
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  Description: "Checks for trailing comma in argument lists."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
+  EnforcedStyleForMultiline: comma
+  SupportedStylesForMultiline:
+    - comma
+    - consistent_comma
+    - no_comma
+  Enabled: true
+
+Style/TrailingCommaInLiteral:
+  Description: "Checks for trailing comma in array and hash literals."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
+  EnforcedStyleForMultiline: comma
+  SupportedStylesForMultiline:
+    - comma
+    - consistent_comma
+    - no_comma
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Description: "Not allowed to use unnecessary spacing."
+  Enabled: true
+
+Layout/MultilineOperationIndentation:
+  Description: "Checks indentation of binary operations that exceed 1 line"
+  Enabled: true
+  EnforcedStyle: indented
+
+Layout/MultilineMethodCallIndentation:
+  Description: "Checks indentation of method calls with the dot operator that exceed 1 line"
+  Enabled: true
+  EnforcedStyle: indented
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ColonMethodCall:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
