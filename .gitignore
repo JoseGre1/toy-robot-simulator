@@ -21,3 +21,6 @@
 
 # Ignore local environmental variables
 .env
+
+# Ignore coverage folder
+coverage
